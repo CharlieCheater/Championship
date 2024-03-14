@@ -1,0 +1,24 @@
+﻿@model IEnumerable<PacientViewModel>
+@{
+    ViewData["Title"] = "Pacients Informations";
+}
+<h3>Это страница о пациентах</h3>
+
+<div class="row w-100">
+    @foreach (var item in Model)
+    {
+        <div class="col col-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">@item.LastName @item.FirstName @item.Patronymic</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <img src="data:image/png;base64,@(item.Avatar)" style="" alt="Red dot" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
