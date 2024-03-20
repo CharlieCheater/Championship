@@ -10,7 +10,7 @@ Console.WriteLine("Hello, World!");
 HttpClient client = new HttpClient();
 QRCodeGenerator qRCodeGenerator = new QRCodeGenerator();
 
-var lines = File.ReadAllLines("D:\\конкурс\\КЗ-по-сессиям-и-ресурсы\\Gener.csv", Encoding.UTF8);
+var lines = File.ReadAllLines("C:\\Users\\Charlie Cheater\\Desktop\\Gener.csv", Encoding.UTF8);
 var rand = new Random();
 List<Pacient> pacients = new List<Pacient>();
 foreach (var line in lines)

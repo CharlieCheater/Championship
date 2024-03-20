@@ -11,5 +11,7 @@ namespace ImageSniffer.Models
         public int Id { get; set; }
         public string QrCode { get; set; }
         public DateTime EntryDate { get; set; }
+        public int PacientId { get; set; }
+        public Pacient Pacient { get; set; }
     }
 }

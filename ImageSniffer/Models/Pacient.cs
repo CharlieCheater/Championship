@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,6 @@ namespace ImageSniffer.Models
         public Gender Gender { get; set; }
         public int GenderId { get; set;}
 
-        public int MedCardId { get; set; }
         public MedCard MedCard { get; set; }
     }
 }

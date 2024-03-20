@@ -11,6 +11,7 @@ namespace ImageSniffer.Models
     {
         public MainContext()
         {
+            Database.EnsureDeleted();
             Database.EnsureCreated();
         }
         public DbSet<Gender> Genders { get; set; }
@@ -20,7 +21,7 @@ namespace ImageSniffer.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("Data Source=192.168.227.12;Initial Catalog=MedCompany01;User ID=user01;Password=01;Trust Server Certificate=True");
+            optionsBuilder.UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=MedCompany01;User ID=sa;Password=1;Trust Server Certificate=True");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -30,10 +31,12 @@ namespace ImageSniffer.Models
                 new Gender { Id = 1, Name = "Мужской"},
                 new Gender { Id = 2, Name = "Женский"},
             });
-            //modelBuilder.Entity<Pacient>(ent =>
-            //{
-            //    ent.HasOne(x => x.MedCard).WithOne(p => p.Pacient);
-            //});
+            modelBuilder.Entity<Pacient>(ent =>
+            {
+                ent.HasOne(x => x.MedCard)
+                .WithOne(p => p.Pacient)
+                .HasForeignKey<MedCard>(x => x.PacientId);
+            });
         }
     }
 }
