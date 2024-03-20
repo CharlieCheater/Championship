@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Session02.MoveTracking.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Session02.MoveTracking
 {
@@ -21,6 +24,7 @@ namespace Session02.MoveTracking
     public partial class MainWindow : Window
     {
         private Dictionary<int, SkudInfo> _skudControls;
+        private ApiClient _apiClient = new ApiClient();
         private Random random = new Random();
         public MainWindow()
         {
@@ -37,36 +41,45 @@ namespace Session02.MoveTracking
                 { 1, new(1, Skud1) },
             };
         }
-        public void TryDraw()
+        public async Task TryDraw()
         {
-
-            for (int i = 0; i < 20; i++)
+            var data = await _apiClient.GetPersons();
+            var clients = data.Response.Where(x => x.LastSecurityPointNumber >= 17 && x.LastSecurityPointNumber < 21)
+                .ToArray();
+            for (int i = 0; i < clients.Count(); i++)
             {
+                var client = clients[i];
                 int skudId = random.Next(17, 20);
                 var skud = _skudControls[skudId];
                 var grid = skud.Border.Child as Grid;
-                var x = random.NextDouble() * (grid.ActualWidth - 10);
-                var y = random.NextDouble() * (grid.ActualHeight - 10);
-                DrawPoint(x, y, skud);
+                var x = random.Next(0, (int)grid.ActualWidth) ;
+                var y = random.Next(0, (int)grid.ActualHeight);
+                DrawPoint(x, y, skud, client.PersonRole);
             }
         }
-        public void DrawPoint(double x, double y, SkudInfo skud)
+        public void DrawPoint(double x, double y, SkudInfo skud, string role = "Сотрудник")
         {
-            Ellipse point = new Ellipse()
+            Dispatcher.BeginInvoke(() =>
             {
-                Width = 5,
-                Height = 5,
-                Fill = Brushes.Blue,
-                Margin = new Thickness(x, y, 0, 0)
-            };
-            var grid = skud.Border.Child as Grid;
-            grid.Children.Add(point);
-            skud.HumanPositions.Add(new HumanPosition
-            {
-                Ellipse = point,
-                Id = random.Next(1000, 9999)
+                Ellipse point = new Ellipse()
+                {
+                    HorizontalAlignment = HorizontalAlignment.Left,
+                    VerticalAlignment = VerticalAlignment.Top,
+                    Width = 15,
+                    Height = 15,
+                    Fill = role == "Сотрудник" ? Brushes.Blue : Brushes.Green,
+                    Margin = new Thickness(x, y, 0, 0)
+                };
+                var grid = skud.Border.Child as Grid;
+                grid.Children.Add(point);
+                skud.HumanPositions.Add(new HumanPosition
+                {
+                    Ellipse = point,
+                    Id = random.Next(1000, 9999)
+                });
+                point.MouseLeftButtonDown += Point_MouseLeftButtonDown;
+
             });
-            point.MouseLeftButtonDown += Point_MouseLeftButtonDown;
             //Canvas.SetLeft(point, x);
             //Canvas.SetTop(point, y);
         }
@@ -86,9 +99,14 @@ namespace Session02.MoveTracking
             selectedPoint.MouseLeftButtonDown -= Point_MouseLeftButtonDown;
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            TryDraw();
+            Timer timer = new Timer();
+            timer.AutoReset = true;
+            timer.Interval = 3000;
+            timer.Enabled = true;
+            timer.Elapsed += async (asd, dsa) => await TryDraw();
+
         }
     }
 }

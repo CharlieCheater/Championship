@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Добавление пациента";
+}
+@model AddPacientViewModel
+<form asp-action="CreatePacient" asp-controller="Pacient" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Добавление</h4>
+                </div>
+                <div class="card-body">
+
+                    <div class="row">
+                        <div class="col">
+                            <label>Фамилия</label>
+                            <input asp-for="LastName" class="form-control form-control-sm" placeholder="Обязательное" />
+                            <span class="text-danger" asp-validation-for="LastName"></span>
+                        </div>
+                        <div class="col">
+                            <label>Имя</label>
+                            <input asp-for="FirstName" class="form-control form-control-sm" placeholder="Обязательное" />
+                            <span class="text-danger" asp-validation-for="FirstName"></span>
+                        </div>
+                        <div class="col">
+                            <label>Отчество</label>
+                            <input asp-for="Patronymic" class="form-control form-control-sm" placeholder="" />
+                            <span class="text-danger" asp-validation-for="Patronymic"></span>
+                        </div>
+                        <div class="col">
+                            <label>Дата рождения</label>
+                            <input type="date" asp-for="Birthday" class="form-control form-control-sm" placeholder="" />
+                            <span class="text-danger" asp-validation-for="Birthday"></span>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col col-6">
+                            <label>Адрес</label>
+                            <input asp-for="Address" class="form-control form-control-sm" placeholder="Обязательное" />
+                            <span class="text-danger" asp-validation-for="Address"></span>
+                        </div>
+                        <div class="col">
+                            <label>Номер телефона</label>
+                            <input asp-for="PhoneNumber" class="form-control form-control-sm" placeholder="Обязательное" />
+                            <span class="text-danger" asp-validation-for="PhoneNumber"></span>
+                        </div>
+                        <div class="col">
+                            <label>Эл. почта</label>
+                            <input asp-for="Email" class="form-control form-control-sm" placeholder="Обязательное" />
+                            <span class="text-danger" asp-validation-for="Email"></span>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col col-3">
+                            <label>Пол</label>
+                            <select asp-for="GenderId" class="form-control form-control-sm">
+                                <option value="1" selected>Мужской</option>
+                                <option value="2">Женский</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label>Загрузить Аватар</label>
+                            <input asp-for="Avatar" class="form-control form-control-sm" type="file" />
+                            <span class="text-danger" asp-validation-for="Avatar"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary" type="submit">Добавить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

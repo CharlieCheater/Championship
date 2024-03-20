@@ -7,6 +7,7 @@
         public string LastName { get; set; }
         public string Patronymic { get; set; }
         public string Avatar { get; set; }
+
         public string QrCode { get; set; }
     }
 }

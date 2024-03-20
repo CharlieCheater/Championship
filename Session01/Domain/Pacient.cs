@@ -21,7 +21,6 @@ namespace Session01.Domain
         public Gender Gender { get; set; }
         public int GenderId { get; set;}
 
-        public int MedCardId { get; set; }
         public MedCard MedCard { get; set; }
     }
 }

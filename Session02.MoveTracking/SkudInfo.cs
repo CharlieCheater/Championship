@@ -23,6 +23,7 @@ namespace Session02.MoveTracking
     public class HumanPosition
     {
         public int Id { get; set; }
+        public string Role { get; set; }
         public Ellipse Ellipse { get; set; }
     }
 }

@@ -13,6 +13,7 @@ QRCodeGenerator qRCodeGenerator = new QRCodeGenerator();
 var lines = File.ReadAllLines("C:\\Users\\Charlie Cheater\\Desktop\\Gener.csv", Encoding.UTF8);
 var rand = new Random();
 List<Pacient> pacients = new List<Pacient>();
+//https://ciox.ru/generator-full-name - генератор ФИО
 foreach (var line in lines)
 {
     var bytes = await client.GetByteArrayAsync("https://thispersondoesnotexist.com/");
@@ -38,7 +39,7 @@ foreach (var line in lines)
         Birthday = new DateTime(rand.Next(2000, 2010), 1, rand.Next(1,30))
     };
     pacients.Add(pacient);
-    Thread.Sleep(50);
+    Thread.Sleep(100);
 }
 context.Pacients.AddRange(pacients);
 context.SaveChanges();

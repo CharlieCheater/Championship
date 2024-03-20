@@ -21,7 +21,6 @@ namespace ImageSniffer.Models
         public DateTime RegistrationDate { get; set; }
         public Gender Gender { get; set; }
         public int GenderId { get; set;}
-
         public MedCard MedCard { get; set; }
     }
 }

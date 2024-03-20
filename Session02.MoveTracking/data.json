@@ -1,0 +1,207 @@
+{
+  "response": [
+    {
+      "personCode": 444987,
+      "personRole": "Клиент",
+      "lastSecurityPointNumber": 21,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:34:24"
+    },
+    {
+      "personCode": 787060,
+      "personRole": "Клиент",
+      "lastSecurityPointNumber": 13,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:35:05"
+    },
+    {
+      "personCode": 438260,
+      "personRole": "Сотрудник",
+      "lastSecurityPointNumber": 11,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:35:06"
+    },
+    {
+      "personCode": 734170,
+      "personRole": "Сотрудник",
+      "lastSecurityPointNumber": 10,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:34:33"
+    },
+    {
+      "personCode": 302325,
+      "personRole": "Клиент",
+      "lastSecurityPointNumber": 17,
+      "lastSecurityPointDirection": "in",
+      "lastSecurityPointTime": "2024-03-20 11:34:52"
+    },
+    {
+      "personCode": 859189,
+      "personRole": "Сотрудник",
+      "lastSecurityPointNumber": 13,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:34:55"
+    },
+    {
+      "personCode": 259332,
+      "personRole": "Сотрудник",
+      "lastSecurityPointNumber": 0,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:35:04"
+    },
+    {
+      "personCode": 804221,
+      "personRole": "Клиент",
+      "lastSecurityPointNumber": 7,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:34:53"
+    },
+    {
+      "personCode": 447368,
+      "personRole": "Клиент",
+      "lastSecurityPointNumber": 10,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:34:32"
+    },
+    {
+      "personCode": 338291,
+      "personRole": "Сотрудник",
+      "lastSecurityPointNumber": 1,
+      "lastSecurityPointDirection": "in",
+      "lastSecurityPointTime": "2024-03-20 11:35:05"
+    },
+    {
+      "personCode": 802435,
+      "personRole": "Клиент",
+      "lastSecurityPointNumber": 22,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:34:45"
+    },
+    {
+      "personCode": 527928,
+      "personRole": "Клиент",
+      "lastSecurityPointNumber": 4,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:35:04"
+    },
+    {
+      "personCode": 848440,
+      "personRole": "Сотрудник",
+      "lastSecurityPointNumber": 1,
+      "lastSecurityPointDirection": "in",
+      "lastSecurityPointTime": "2024-03-20 11:35:07"
+    },
+    {
+      "personCode": 380537,
+      "personRole": "Клиент",
+      "lastSecurityPointNumber": 5,
+      "lastSecurityPointDirection": "in",
+      "lastSecurityPointTime": "2024-03-20 11:34:32"
+    },
+    {
+      "personCode": 442395,
+      "personRole": "Сотрудник",
+      "lastSecurityPointNumber": 3,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:34:46"
+    },
+    {
+      "personCode": 206070,
+      "personRole": "Клиент",
+      "lastSecurityPointNumber": 1,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:34:44"
+    },
+    {
+      "personCode": 592178,
+      "personRole": "Клиент",
+      "lastSecurityPointNumber": 9,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:34:44"
+    },
+    {
+      "personCode": 394466,
+      "personRole": "Сотрудник",
+      "lastSecurityPointNumber": 9,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:34:59"
+    },
+    {
+      "personCode": 574323,
+      "personRole": "Клиент",
+      "lastSecurityPointNumber": 1,
+      "lastSecurityPointDirection": "in",
+      "lastSecurityPointTime": "2024-03-20 11:34:28"
+    },
+    {
+      "personCode": 737439,
+      "personRole": "Сотрудник",
+      "lastSecurityPointNumber": 1,
+      "lastSecurityPointDirection": "in",
+      "lastSecurityPointTime": "2024-03-20 11:34:23"
+    },
+    {
+      "personCode": 303010,
+      "personRole": "Сотрудник",
+      "lastSecurityPointNumber": 21,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:34:24"
+    },
+    {
+      "personCode": 464771,
+      "personRole": "Клиент",
+      "lastSecurityPointNumber": 8,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:35:05"
+    },
+    {
+      "personCode": 324393,
+      "personRole": "Сотрудник",
+      "lastSecurityPointNumber": 9,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:34:33"
+    },
+    {
+      "personCode": 549139,
+      "personRole": "Сотрудник",
+      "lastSecurityPointNumber": 5,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:34:35"
+    },
+    {
+      "personCode": 848847,
+      "personRole": "Сотрудник",
+      "lastSecurityPointNumber": 21,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:34:42"
+    },
+    {
+      "personCode": 902250,
+      "personRole": "Сотрудник",
+      "lastSecurityPointNumber": 19,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:35:06"
+    },
+    {
+      "personCode": 742610,
+      "personRole": "Клиент",
+      "lastSecurityPointNumber": 18,
+      "lastSecurityPointDirection": "out",
+      "lastSecurityPointTime": "2024-03-20 11:34:58"
+    },
+    {
+      "personCode": 478115,
+      "personRole": "Клиент",
+      "lastSecurityPointNumber": 4,
+      "lastSecurityPointDirection": "in",
+      "lastSecurityPointTime": "2024-03-20 11:34:38"
+    },
+    {
+      "personCode": 456449,
+      "personRole": "Клиент",
+      "lastSecurityPointNumber": 10,
+      "lastSecurityPointDirection": "in",
+      "lastSecurityPointTime": "2024-03-20 11:34:34"
+    }
+  ]
+}
